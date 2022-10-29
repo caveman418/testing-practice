@@ -1,0 +1,32 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caveman418/testing-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caveman418/testing-practice/issues"
+  },
+  "homepage": "https://github.com/caveman418/testing-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.4",
+    "jest": "^29.2.2"
+  }
+}
