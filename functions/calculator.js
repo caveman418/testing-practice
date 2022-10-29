@@ -14,7 +14,8 @@ export function multiply(a = 1, b = 1) {
 }
 
 export function divide(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number' || !a || !b) return 'invalid input';
     if (b === 0) return 'error: divide by 0';
+    if (a === 0) return 0;
+    if (typeof a !== 'number' || typeof b !== 'number' || !a || !b) return 'invalid input';
     return a / b;
 }
