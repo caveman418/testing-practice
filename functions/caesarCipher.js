@@ -9,11 +9,11 @@ export default function caesarCipher(str, offset) {
         let newCode = charCode + offset;
 
         if (charCode >= 65 && charCode <= 90) {
-            if (newCode <= 64) newCode = 90 - (64 - newCode);
-            if (newCode >= 91) newCode = 65 + (newCode - 91);
+            if (newCode <= 64) newCode += 26;
+            if (newCode >= 91) newCode -= 26;
         } else if (charCode >= 97 && charCode <= 122) {
-            if (newCode <= 96) newCode = 122 - (96 - newCode);
-            if (newCode >= 123) newCode = 97 + (newCode - 123);
+            if (newCode <= 96) newCode += 26;
+            if (newCode >= 123) newCode -= 26;
         } else {
             newCode = charCode; //retain old code if special character
         }
@@ -24,7 +24,7 @@ export default function caesarCipher(str, offset) {
     return ans;
 }
 
-//64:  A
-//89:  Z
-//96:  a
-//121: z
+//65:  A
+//90:  Z
+//97:  a
+//122: z
